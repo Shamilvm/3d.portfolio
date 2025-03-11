@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 
 const Setup = (props) => {
   const { nodes, materials } = useGLTF("/models/gaming_setup.glb");
+
+  const screenTexture = useTexture("textures/desk/screen.png");
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -308,7 +310,9 @@ const Setup = (props) => {
                 receiveShadow
                 geometry={nodes.Object_6_Screen001_0.geometry}
                 material={materials["Screen.001"]}
-              />
+              >
+                <meshMatcapMaterial map={screenTexture} />
+              </mesh>
               <mesh
                 castShadow
                 receiveShadow

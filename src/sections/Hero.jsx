@@ -1,11 +1,17 @@
 import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-import Setup from "./Setup";
-import CanvasLoader from "./CanvasLoader";
+import Setup from "../components/Setup";
+import CanvasLoader from "../components/CanvasLoader";
 // import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
+import Target from "../components/Target";
+import ReactLogo from "../components/ReactLogo";
+import Cube from "../components/Cube";
+import Rings from "../components/Rings";
+import HeroCamera from "../components/HeroCamera";
+import Button from "../components/Button";
 
 const Hero = () => {
   // const controls = useControls("Setup", {
@@ -66,15 +72,32 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <Setup
-              position={sizes.deskPosition}
-              rotation={[-2.9, -1.5, 3.1]}
-              scale={sizes.deskScale}
-            />
+            <HeroCamera isMobile={isMobile}>
+              <Setup
+                position={sizes.deskPosition}
+                rotation={[-2.9, -1.5, 3.1]}
+                scale={sizes.deskScale}
+              />
+            </HeroCamera>
+            <group>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
+            </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+          <a href="#contact" className="w-fit">
+            <Button
+              name={`Let's work together`}
+              isBeam
+              containerClass="sm:w-fit w-full sm:min-w-96"
+            />
+          </a>
+        </div>
       </div>
     </section>
   );
