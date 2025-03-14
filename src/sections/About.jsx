@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Globe from "react-globe.gl";
 import Button from "../components/Button";
+// import Globe from "react-globe.gl";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -11,11 +11,12 @@ const About = () => {
       setHasCopied(false);
     }, 2000);
   };
+
   return (
     <section className="c-space my-20">
       <div className="grid xl:grid-cols-3 xl:grid-rows-3 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid1.png"
               alt=""
@@ -33,7 +34,7 @@ const About = () => {
           </div>
         </div>
         <div className="col-span-1 xl:row-span-3">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid2.png"
               alt=""
@@ -49,9 +50,9 @@ const About = () => {
           </div>
         </div>
         <div className="col-span-1 xl:row-span-4">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
+              {/* <Globe
                 height={326}
                 width={326}
                 backgroundColor="rgba(0,0,0,0)"
@@ -69,7 +70,7 @@ const About = () => {
                 //     size: 20,
                 //   },
                 // ]}
-              />
+              /> */}
             </div>
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
@@ -87,7 +88,7 @@ const About = () => {
           </div>
         </div>
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid3.png"
               alt=""
@@ -105,7 +106,7 @@ const About = () => {
           </div>
         </div>
         <div className="xl:col-span-1 xl:row-span-2">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid4.png"
               alt=""
