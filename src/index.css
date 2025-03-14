@@ -14,14 +14,6 @@ body {
   .c-space {
     @apply sm:px-10 px-5;
   }
-
-  /* .head-text {
-    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
-  } */
-
-  /* .text-gray_gradient {
-    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
-  } */
 }
 
 .waving-hand {
@@ -30,6 +22,16 @@ body {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+.arrow-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
 }
 
 @keyframes wave-animation {
