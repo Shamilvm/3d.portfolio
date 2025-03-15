@@ -1,12 +1,45 @@
 import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = () => {};
-  const handleSubmit = () => {};
+  const handleChange = ({ target: { name, value } }) => {
+    setForm({ ...form, [name]: value });
+  };
+
+  //service_apcutmj
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    try {
+      await emailjs.send(
+        "service_apcutmj",
+        "template_z4qt96n",
+        {
+          from_name: form.name,
+          to_name: "Shamil",
+          from_email: form.email,
+          to_email: "shanushamil086@gmail.com",
+          message: form.message,
+        },
+        "rLHkTGyrTfoHwxyuV"
+      );
+
+      setLoading(false);
+      alert("Your Message has been sent!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+
+      alert("Something went wrong");
+    }
+  };
+
   return (
     <section className="c-space my-20">
       <div className="relative min-h-screen flex items-center justify-center flex-col">
