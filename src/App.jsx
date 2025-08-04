@@ -8,7 +8,7 @@ import Projects from "./sections/Projects";
 
 function App() {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className="max-w-7xl mx-auto font-poppins">
       <Navbar />
       <Hero />
       <About />

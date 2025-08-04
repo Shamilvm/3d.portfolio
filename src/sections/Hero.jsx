@@ -63,9 +63,9 @@ const Hero = () => {
         <p className="sm:text-3xl text-xl font-medium text-white text-center">
           Hi, I am Shamil Vm <span className="waving-hand">👋</span>
         </p>
-        <p className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal">
+        {/* <p className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal">
           Fullstack Developer
-        </p>
+        </p> */}
       </div>
       <div className="w-full h-full absolute inset-0">
         {/* <Leva /> */}
