@@ -213,12 +213,17 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
-    deskScale: isSmall ? 0.9 : isMobile ? 1.0 : 2.3,
+    deskScale: isSmall ? 0.9 : isMobile ? 1.1 : 2.1,
     deskPosition: isSmall
-      ? [1.3, 4.5, 0]
+      ? [1.4,4.1,-8.9]
       : isMobile
-      ? [1.5, 1.4, 0]
-      : [3.1, -6.9, -3.5],
+      ? [1.4,0,-8.9]
+      : [3.9,-6.1,-8.9],
+    deskRotation: isSmall
+      ? [-2.8,-1.6,3.1]
+      : isMobile
+      ? [-2.8,-1.6,3.1]
+      : [-2.8,-1.6,3.3],
     cubePosition: isSmall
       ? [4, -5, 0]
       : isMobile

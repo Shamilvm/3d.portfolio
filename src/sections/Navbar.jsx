@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-5 mx-auto c-space relative">
           <a href="/" className="absolute sm:left-0 -left-4">
             <img
-              src="/public/assets/logo/logooo.png"
+              src="/assets/logo/logooo.png"
               alt="Shamil Vm"
               className=" h-48"
             />

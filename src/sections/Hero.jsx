@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import Setup from "../components/Setup";
 import CanvasLoader from "../components/CanvasLoader";
-// import { Leva, useControls } from "leva";
+import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import Target from "../components/Target";
@@ -16,37 +16,37 @@ import Button from "../components/Button";
 const Hero = () => {
   // const controls = useControls("Setup", {
   //   positionX: {
-  //     value: 2.5,
+  //     value: 3.9,
   //     min: -10,
   //     max: 10,
   //   },
   //   positionY: {
-  //     value: 2.5,
+  //     value: -6.1,
   //     min: -10,
   //     max: 10,
   //   },
   //   positionZ: {
-  //     value: 2.5,
+  //     value: -8.9,
   //     min: -10,
   //     max: 10,
   //   },
   //   rotationX: {
-  //     value: 2.5,
+  //     value: -2.8,
   //     min: -10,
   //     max: 10,
   //   },
   //   rotationY: {
-  //     value: 2.5,
+  //     value: -1.6,
   //     min: -10,
   //     max: 10,
   //   },
   //   rotationZ: {
-  //     value: 2.5,
+  //     value: 3.3,
   //     min: -10,
   //     max: 10,
   //   },
   //   scale: {
-  //     value: 2.5,
+  //     value: 2.1,
   //     min: -10,
   //     max: 10,
   //   },
@@ -72,19 +72,25 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <HeroCamera isMobile={isMobile}>
+            <HeroCamera>
               <Setup
                 position={sizes.deskPosition}
-                rotation={[-2.9, -1.5, 3.1]}
+                // position={[1.4,1.3,-8.9]}
+                // position={[controls.positionX,controls.positionY,controls.positionZ]}
+                rotation={sizes.deskRotation}
+                // rotation={[-2.8,-1.6,3.1]}
+                // rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
                 scale={sizes.deskScale}
+                // scale={1.1}
+                // scale={controls.scale}
               />
             </HeroCamera>
-            <group>
+            {/* <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} />
               <Rings position={sizes.ringPosition} />
-            </group>
+            </group> */}
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
