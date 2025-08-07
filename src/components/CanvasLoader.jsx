@@ -1,5 +1,4 @@
 import { Html, useProgress } from "@react-three/drei";
-import React from "react";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
@@ -12,6 +11,9 @@ const CanvasLoader = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        height: "100vh",
+        backgroundColor: "black",
+        color: "#f1f1f1",
       }}
     >
       <span className="canvas-loader" />
