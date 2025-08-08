@@ -1,4 +1,3 @@
-import { useState } from "react";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import WorkExperience from "./sections/Experience";
@@ -6,7 +5,6 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
-import CanvasLoader from "./components/CanvasLoader";
 import LoaderWrapper from "./components/LoaderWrapper";
 
 function App() {
@@ -16,7 +14,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
-        <Projects />
+        {/* <Projects /> */}
         {/* <WorkExperience /> */}
         <Contact />
         <Footer />

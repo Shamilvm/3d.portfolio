@@ -27,8 +27,7 @@ const About = () => {
                 I'm Shamil
               </p>
               <p className="text-[#afb0b6] text-base">
-                With 2 years of experience, I have honed my skills in frontend
-                and backend development.
+                I'm a passionate software developer based in Dubai, UAE.
               </p>
             </div>
           </div>
@@ -36,16 +35,18 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="w-full h-full border border-gray-700 bg-gray-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
-              src="/assets/grid2.png"
+              src="/assets/grid1.png"
               alt=""
               className="w-full sm:h-[276px] h-fit object-contain"
             />
-            <div className="text-xl font-semibold mb-2 text-white">
-              Tech Stack
-            </div>
-            <div className="text-[#afb0b6] text-base">
-              I specialize in javascript/typescript with a focus on react and
-              next.js ecosystems.
+            <div>
+              <p className="text-xl font-semibold mb-2 text-white">
+                Tech Stack
+              </p>
+              <p className="text-[#afb0b6] text-base">
+                I specialize in javascript/typescript with a focus on react and
+                next.js ecosystems.
+              </p>
             </div>
           </div>
         </div>
@@ -77,7 +78,7 @@ const About = () => {
                 I work remotely across most timezones.
               </p>
               <p className="text-[#afb0b6] text-base">
-                I'm based in Croatia, with remote work available.
+                {/* I'm based in Croatia, with remote work available. */}
               </p>
               <Button
                 name={"Contact Me"}
@@ -99,8 +100,9 @@ const About = () => {
                 My passion for coding
               </p>
               <p className="text-[#afb0b6] text-base">
-                I love solving problems and building things through code. Coding
-                isn't just my profession - it is my passion.
+                Curious to learn more about developing scalable distributed
+                systems, loves problem solving. 🖥️ Always curious and ready for
+                the next tech challenge 🎯 Let's complete the puzzle together.🧩
               </p>
             </div>
           </div>
@@ -122,8 +124,8 @@ const About = () => {
                   src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
                   alt=""
                 />
-                <p className="lg:text-2xl md:text-xl font-medium text-white">
-                  shanushamil086@gmail.com
+                <p className="lg:text-lg md:text-xl font-medium text-white">
+                  shamilvilakkumadathil@gmail.com
                 </p>
               </div>
             </div>
