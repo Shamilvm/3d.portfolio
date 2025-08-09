@@ -1,11 +1,50 @@
 import React, { Suspense, useState } from "react";
 import { myProjects } from "../constants";
 import { Canvas } from "@react-three/fiber";
-import { Center, OrbitControls } from "@react-three/drei";
+import { Center, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
-import DemoComputer from "../components/DemoComputer";
+import AsusLaptop from "../components/AsusLaptop";
+import { Leva, useControls } from "leva";
+import HeroCamera from "../components/HeroCamera";
 
 const Projects = () => {
+  // const controls = useControls("Setup", {
+  //   positionX: {
+  //     value: 3.9,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   positionY: {
+  //     value: -6.1,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   positionZ: {
+  //     value: -8.9,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   rotationX: {
+  //     value: -2.8,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   rotationY: {
+  //     value: -1.6,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   rotationZ: {
+  //     value: 3.3,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   scale: {
+  //     value: 2.1,
+  //     min: -10,
+  //     max: 30,
+  //   },
+  // });
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const currentProject = myProjects[selectedProjectIndex];
 
@@ -21,7 +60,7 @@ const Projects = () => {
     });
   };
   return (
-    <section className="c-space my-20">
+    <section id="work" className="c-space my-20">
       <p className="sm:text-4xl text-3xl font-semibold">My Work</p>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-gray-700">
@@ -86,14 +125,34 @@ const Projects = () => {
           </div>
         </div>
         <div className="border border-gray-800 bg-black-950 rounded-lg h-96 md:h-full">
+          {/* <Leva /> */}
           <Canvas>
             <ambientLight intensity={Math.PI} />
             <directionalLight position={[10, 10, 5]} />
             <Center>
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
+                <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+                <HeroCamera>
+                  <AsusLaptop
+                    texture={currentProject.texture}
+                    position={[0.4, -2.9, 1.3]}
+                    // position={[
+                    //   controls.positionX,
+                    //   controls.positionY,
+                    //   controls.positionZ,
+                    // ]}
+                    rotation={[-3.0, 3.0, 3.1]}
+                    // rotation={[
+                    //   controls.rotationX,
+                    //   controls.rotationY,
+                    //   controls.rotationZ,
+                    // ]}
+                    scale={30}
+                    // scale={controls.scale}
+                  />
+                </HeroCamera>
+                <ambientLight intensity={1} />
+                <directionalLight position={[10, 10, 10]} intensity={0.5} />
               </Suspense>
             </Center>
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />

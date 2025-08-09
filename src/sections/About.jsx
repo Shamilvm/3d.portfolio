@@ -18,7 +18,7 @@ const About = () => {
             <img
               src="/assets/image/shanu.png"
               alt=""
-              className="sm:w-[150px] sm:h-[170px] border border-gray-800 rounded-2xl h-fit object-contain"
+              className="sm:w-[150px] h-[170px] border border-gray-800 rounded-2xl object-contain"
             />
             <div>
               <p className="text-xl font-semibold mb-2 text-white">

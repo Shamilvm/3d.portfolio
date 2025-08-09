@@ -60,10 +60,10 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="h-[70vh] sm:min-h-screen w-full flex flex-col relative"
+      className="min-h-screen w-full flex flex-col relative"
     >
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-32 c-space gap-3">
+        <p className="sm:text-3xl text-xl font-medium text-gray-400 text-center">
           Hi, I am Shamil Vm <span className="waving-hand">👋</span>
         </p>
         {/* <p className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal">
