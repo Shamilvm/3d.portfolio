@@ -58,7 +58,10 @@ const Hero = () => {
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
   return (
-    <section id="home" className="h-[70vh] sm:min-h-screen w-full flex flex-col relative">
+    <section
+      id="home"
+      className="h-[70vh] sm:min-h-screen w-full flex flex-col relative"
+    >
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center">
           Hi, I am Shamil Vm <span className="waving-hand">👋</span>
@@ -75,13 +78,10 @@ const Hero = () => {
             <HeroCamera>
               <Setup
                 position={sizes.deskPosition}
-                // position={[1.4,1.3,-8.9]}
                 // position={[controls.positionX,controls.positionY,controls.positionZ]}
                 rotation={sizes.deskRotation}
-                // rotation={[-2.8,-1.6,3.1]}
                 // rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
                 scale={sizes.deskScale}
-                // scale={1.1}
                 // scale={controls.scale}
               />
             </HeroCamera>

@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 const Setup = (props) => {
   const { nodes, materials } = useGLTF("/models/gaming_setup.glb");
 
   const screenTexture = useTexture("textures/desk/screen.png");
+  const mobileTexture = useTexture("textures/desk/sc2.png");
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -116,7 +116,9 @@ const Setup = (props) => {
             receiveShadow
             geometry={nodes.Cube011_screen001_0.geometry}
             material={materials["screen.001"]}
-          />
+          >
+            <meshMatcapMaterial map={mobileTexture} />
+          </mesh>
           <mesh
             castShadow
             receiveShadow
