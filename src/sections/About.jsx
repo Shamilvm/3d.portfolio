@@ -35,7 +35,7 @@ const About = () => {
             <img
               src="/assets/image/man.png"
               alt=""
-              className="w-full sm:h-[200px] h-fit object-contain"
+              className="h-[200px] object-contain"
             />
             <div>
               <p className="text-xl font-semibold mb-2 text-white">What I Do</p>

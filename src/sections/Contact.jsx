@@ -45,7 +45,7 @@ const Contact = () => {
         <img
           src="/assets/terminal.png"
           alt=""
-          className="absolute inset-0 min-h-screen"
+          className="absolute inset-0 min-h-screen hidden sm:block"
         />
         <div className="max-w-3xl relative z-10 sm:px-10 px-5 mt-12">
           <h3 className="sm:text-4xl text-3xl font-semibold text-white">
