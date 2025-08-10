@@ -59,6 +59,7 @@ const Projects = () => {
       }
     });
   };
+
   return (
     <section id="work" className="c-space my-20">
       <p className="sm:text-4xl text-3xl font-semibold">My Work</p>
@@ -99,7 +100,7 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <a
+            {/* <a
               className="flex items-center gap-2 cursor-pointer text-gray-100"
               href={currentProject.href}
               target="_blank"
@@ -107,7 +108,7 @@ const Projects = () => {
             >
               <p>Check Live Site</p>
               <img src="/assets/arrow-up.png" alt="" className="w-3 h-3" />
-            </a>
+            </a> */}
           </div>
           <div className="flex justify-between items-center mt-7">
             <button
@@ -135,7 +136,7 @@ const Projects = () => {
                 <HeroCamera>
                   <AsusLaptop
                     texture={currentProject.texture}
-                    position={[0.4, -2.9, 1.3]}
+                    position={[0.4, -2.5, 1.3]}
                     // position={[
                     //   controls.positionX,
                     //   controls.positionY,

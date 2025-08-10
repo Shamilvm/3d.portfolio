@@ -1,29 +1,31 @@
 import React, { useEffect, useRef } from "react";
-import { useGLTF, useVideoTexture } from "@react-three/drei";
+import { useGLTF, useTexture, useVideoTexture } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const AsusLaptop = (props) => {
-  const group = useRef();
+  // const group = useRef();
   const { nodes, materials, animations } = useGLTF(
     "/models/asus_rog_zephyrus_g15.glb"
   );
-  const txt = useVideoTexture(
-    props.texture ? props.texture : "/textures/project/project1.mp4"
-  );
-  useEffect(() => {
-    if (txt) {
-      txt.flipY = false;
-    }
-  }, [txt]);
+  // const txt = useVideoTexture(
+  //   props.texture ? props.texture : "/textures/project/project1.mp4"
+  // );
+  // useEffect(() => {
+  //   if (txt) {
+  //     txt.flipY = false;
+  //   }
+  // }, [txt]);
 
-  useGSAP(() => {
-    gsap.from([0, -0.1, 0], {
-      y: Math.PI / 2,
-      duration: 1,
-      ease: "power3.out",
-    });
-  }, [txt]);
+  // useGSAP(() => {
+  //   gsap.from([0, -0.1, 0], {
+  //     y: Math.PI / 2,
+  //     duration: 1,
+  //     ease: "power3.out",
+  //   });
+  // }, [txt]);
+
+  const screenTexture = useTexture(props.texture);
 
   return (
     <group {...props} dispose={null}>
@@ -106,7 +108,9 @@ const AsusLaptop = (props) => {
           geometry={nodes.Object_54.geometry}
           material={materials.Screen}
           rotation={[-1.927, 0, 0]}
-        />
+        >
+          <meshMatcapMaterial map={screenTexture} />
+        </mesh>
         <mesh
           castShadow
           receiveShadow
