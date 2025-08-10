@@ -1,15 +1,11 @@
 import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import Setup from "../components/Setup";
 import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import Target from "../components/Target";
-import ReactLogo from "../components/ReactLogo";
-import Cube from "../components/Cube";
-import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
 
@@ -60,15 +56,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen w-full flex flex-col relative"
+      className="h-[90vh] sm:min-h-screen w-full flex flex-col relative"
     >
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-32 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-gray-400 text-center">
           Hi, I am Shamil Vm <span className="waving-hand">👋</span>
         </p>
-        {/* <p className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal">
-          Fullstack Developer
-        </p> */}
+        <p className="text-center sm:text-lg text-xs text-gray-500 !leading-normal">
+          Full-Stack Developer | Turning ideas into Experience
+        </p>
       </div>
       <div className="w-full h-full absolute inset-0">
         {/* <Leva /> */}
@@ -96,6 +92,8 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </div>
+
+      {/* <span class="scroll-btn"></span> */}
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
         <a href="#contact" className="w-fit">

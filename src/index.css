@@ -201,3 +201,48 @@ html {
     transform: translateY(-400%);
   }
 }
+
+/* scroll button **/
+.scroll-btn {
+  width: 24px;
+  height: 44px;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  margin: auto;
+  margin-bottom: 80px;
+  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
+}
+.scroll-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #22c55e;
+  border-radius: 10px;
+  animation: scrollDown 1.5s linear infinite;
+}
+@keyframes scrollDown {
+  0% {
+    top: 8px;
+    height: 10px;
+    opacity: 1;
+  }
+  33% {
+    top: 15px;
+    height: 26px;
+  }
+  66% {
+    top: 28px;
+    height: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 32px;
+    height: 4px;
+    opacity: 0;
+  }
+}

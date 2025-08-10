@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <section className="c-space pt-7 pb-3 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-5">
-      <div className="text-white flex gap-2">
-        <p>© 2025 Shamil Vm. All rights reserved. Privacy Policy.</p>
+      <div className="text-white flex gap-2 text-sm">
+        <p>© 2025 Shamil Vm. All rights reserved.</p>
       </div>
       <div className="flex gap-3">
         <a

@@ -1,31 +1,32 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { navLinks } from "../constants";
-
-const NavItems = () => {
-  return (
-    <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
-      {navLinks.map((item) => (
-        <li
-          key={item.id}
-          className="text-neutral-400 hover:text-white sm:w-full sm:rounded-md py-2 sm:px-5"
-        >
-          <a
-            href={item.href}
-            onClick={() => {}}
-            className="text-lg md:text-base hover:text-white transition-colors hover:underline"
-          >
-            {item.name}
-          </a>
-        </li>
-      ))}
-    </ul>
-  );
-};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  const NavItems = () => {
+    return (
+      <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
+        {navLinks.map((item) => (
+          <li
+            key={item.id}
+            className="text-neutral-400 hover:text-white sm:w-full sm:rounded-md py-2 sm:px-5"
+          >
+            <a
+              href={item.href}
+              onClick={toggleMenu}
+              className="text-lg md:text-base hover:text-white transition-colors hover:underline"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <header className="fixed top-0 right-0 left-0 z-50 bg-black/90">
       <div className="max-w-7xl mx-auto">

@@ -4,12 +4,12 @@ const CanvasLoader = () => {
   // const { progress } = useProgress();
   return (
     <Html center>
-      <div class="loader">
+      <div className="loader">
         <p>Shamil</p>
-        <div class="words">
-          <span class="word">Vm</span>
-          <span class="word">Vm</span>
-          <span class="word">Vm</span>
+        <div className="words">
+          <span className="word">Vm</span>
+          <span className="word">Vm</span>
+          <span className="word">Vm</span>
         </div>
       </div>
     </Html>

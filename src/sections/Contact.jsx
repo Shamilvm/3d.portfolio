@@ -99,7 +99,7 @@ const Contact = () => {
               />
             </label>
             <button
-              className="bg-gray-400 px-5 py-2 min-h-12 rounded-2xl shadow-2xl flex justify-center items-center text-lg text-white gap-3 font-semibold"
+              className="bg-gray-800 px-5 py-2 min-h-10 rounded-2xl shadow-2xl flex justify-center items-center text-md text-white gap-3 font-semibold cursor-pointer"
               type="submit"
               disabled={loading}
             >
