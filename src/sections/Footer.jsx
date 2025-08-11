@@ -1,9 +1,6 @@
 const Footer = () => {
   return (
-    <section className="c-space pt-7 pb-3 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-5">
-      <div className="text-white flex gap-2 text-sm">
-        <p>© 2025 Shamil Vm. All rights reserved.</p>
-      </div>
+    <section className="c-space py-7 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-5">
       <div className="flex gap-3">
         <a
           href="https://github.com/Shamilvm"
@@ -30,6 +27,9 @@ const Footer = () => {
             className="w-1/2 h-1/2"
           />
         </a>
+      </div>
+      <div className="text-white flex gap-2 text-sm">
+        <p>© 2025 Shamil Vm. All rights reserved.</p>
       </div>
     </section>
   );
