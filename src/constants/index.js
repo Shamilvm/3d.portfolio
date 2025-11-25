@@ -23,6 +23,38 @@ export const navLinks = [
 
 export const myProjects = [
   {
+    title: "CMMA - Maintenance Management System",
+    desc: "Software for managing the assets of college and offices. It includes managing the hardware and software resources within college or office, stock management, maintenance of college computer lab and others. Still Updations going on...",
+    subdesc:
+      "Built as a asset and maintenance management system with Laravel, PHP, and SASS.",
+    href: "",
+    texture: "/textures/project/cmma.png",
+    logo: "/assets/project-logo2.png",
+    logoStyle: {
+      backgroundColor: "#13202F",
+      border: "0.2px solid #17293E",
+      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Laravel",
+        path: "/assets/icons/laravel.png",
+      },
+      {
+        id: 2,
+        name: "PHP",
+        path: "assets/icons/php.svg",
+      },
+      {
+        id: 3,
+        name: "Sass",
+        path: "/assets/icons/sass.png",
+      },
+    ],
+  },
+  {
     title: "Portfolio",
     desc: "A dynamic, interactive platform designed to showcase my journey, expertise, and creative problem-solving skills. With a clean, modern interface and cutting-edge web technologies, it highlights my proficiency in building scalable applications, intuitive UI/UX designs, and innovative solutions. More coming soon...",
     subdesc:
@@ -61,38 +93,6 @@ export const myProjects = [
         id: 5,
         name: "Vite",
         path: "/assets/icons/vite-js.png",
-      },
-    ],
-  },
-  {
-    title: "CMMA - Maintenance Management System",
-    desc: "Software for managing the assets of college and offices. It includes managing the hardware and software resources within college or office, stock management, maintenance of college computer lab and others. Still Updations going on...",
-    subdesc:
-      "Built as a asset and maintenance management system with Laravel, PHP, and SASS.",
-    href: "",
-    texture: "/textures/project/cmma.png",
-    logo: "/assets/project-logo2.png",
-    logoStyle: {
-      backgroundColor: "#13202F",
-      border: "0.2px solid #17293E",
-      boxShadow: "0px 0px 60px 0px #2F6DB54D",
-    },
-    spotlight: "/assets/spotlight2.png",
-    tags: [
-      {
-        id: 1,
-        name: "Laravel",
-        path: "/assets/icons/laravel.png",
-      },
-      {
-        id: 2,
-        name: "PHP",
-        path: "assets/icons/php.svg",
-      },
-      {
-        id: 3,
-        name: "Sass",
-        path: "/assets/icons/sass.png",
       },
     ],
   },
