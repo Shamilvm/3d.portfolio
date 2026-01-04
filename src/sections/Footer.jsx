@@ -1,4 +1,5 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <section className="c-space py-7 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-5">
       <div className="flex gap-3">
@@ -29,7 +30,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-white flex gap-2 text-sm">
-        <p>© 2025 Shamil Vm. All rights reserved.</p>
+        <p>© {currentYear} Shamil Vm. All rights reserved.</p>
       </div>
     </section>
   );
