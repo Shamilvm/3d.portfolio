@@ -24,6 +24,11 @@ const loadBuyMeACoffee = () => {
   script.setAttribute("data-x_margin", "18");
   script.setAttribute("data-y_margin", "18");
   script.async = true;
+  // The BMC widget only renders on DOMContentLoaded, which has already fired
+  // by the time this lazy-loaded script runs — re-dispatch it so the button mounts.
+  script.onload = () => {
+    document.dispatchEvent(new Event("DOMContentLoaded", { bubbles: true, cancelable: true }));
+  };
   document.body.appendChild(script);
 };
 
